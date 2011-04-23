@@ -16,6 +16,8 @@ $ git commit -m 'your msg about your commit goes here' //names the commit for re
 
 
 $ git remote add origin git@github.com:krustyrusty/Directory-Name-Goes-Here.git 	//sets the origin for the directory's repo
+		//a remote is a repo stored on another computer (in this case github's pc)
+		// it's standard to give the name origin to the remote that points to your main github repo
 
 $git push origin master		//sends the commit to github
 				//if you look at your repo in github, you'll see Your-File-Name-Goes-Here has been added
