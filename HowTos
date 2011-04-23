@@ -114,3 +114,6 @@ $ git branch -d mybranch
 
 //to escape terminal
 ctlr + z
+
+//i screwed up, how do i reset my checkout?
+$ git checkout -f
