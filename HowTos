@@ -111,3 +111,6 @@ $ git merge mybranch
 
 //once your branch is merged with the master, you don't need it anymore and can delete it
 $ git branch -d mybranch
+
+//to escape terminal
+ctlr + z
