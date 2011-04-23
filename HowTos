@@ -1,0 +1,22 @@
+$ mkdir ~/Directory-Name-Goes-Here   //creates a directory for your project
+$ cd ~/Directory-Name-Goes-Here     //changes the current working directory
+$ git init 		 //sets up the necessary git files
+			//initialized empty git rep in /Users/your_user_directory/Directory-Name-Goes-Here/.git/
+
+
+$ touch Your-File-Name-Goes-Here	//creates a new file in your new directory
+
+$ open Your-File-Name Goes-Here		//opens the file in a text editor
+					//edit file and save it
+
+$ git add Your-File-Name-Goes-Here	//stages your file, adding it to the list of files to be committed
+
+$ git commit -m 'your msg about your commit goes here' //names the commit for reference
+			//all of this stuff is executed on local machine. must connect to github account and push commits to it
+
+
+$ git remote add origin git@github.com:krustyrusty/Directory-Name-Goes-Here.git 	//sets the origin for the directory's repo
+
+$git push origin master		//sends the commit to github
+				//if you look at your repo in github, you'll see Your-File-Name-Goes-Here has been added
+
