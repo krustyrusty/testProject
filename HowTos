@@ -1,4 +1,4 @@
-CREATING FILES and COMMITTING EDITS WITHIN THEM
+CREATING FILES
 
 //create a directory for your project
 $ mkdir ~/Directory-Name-Goes-Here   
@@ -16,13 +16,17 @@ $ touch Your-File-Name-Goes-Here
 
 //open the file in a text editor (edit file and save it)
 $ open Your-File-Name Goes-Here		
+
+
+-----------------------------------
+COMMITTING
 					
 //stage your file, adding it to the list of files to be committed
 $ git add Your-File-Name-Goes-Here	
 
 
 //name the commit for reference
-$ git commit -m 'your msg about your commit goes here' 			//
+$ git commit -m 'your msg about your commit goes here' 			
 
 
 
@@ -48,6 +52,17 @@ $ git push origin master
 //NOTE::
 //if you look at your repo in github, you'll see Your-File-Name-Goes-Here has been added
 
+//see what files have been committed
+$ git ls-files
+
+//schedule deletion of a file
+$ git rm [file name]
+
+//committing all changes in a repo 
+$ git commit -a
+
+//view the differences as you commit
+$ git commit -v
 
 -------------------------------------------------
 FORKING A REPO
@@ -111,6 +126,19 @@ $ git merge mybranch
 
 //once your branch is merged with the master, you don't need it anymore and can delete it
 $ git branch -d mybranch
+
+
+//view a list of existing branches
+$ git branch -a
+
+//compare 2 branches
+$ git diff nameOfBranch1 nameOfBranch2
+	e.g.
+		$ git diff master xyz
+
+//if you're in a branch that's not the xyz branch and want to merge xyz into it:
+$ git merge xyz	
+	
 
 //to escape terminal
 ctlr + z
