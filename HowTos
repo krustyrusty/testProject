@@ -162,4 +162,77 @@ $ git pull <from where> <what>
 $ got log
 $ git status
 
+//what changed since HEAD
+$ git diff HEAD
+
+//of that, what is unstaged?
+$ git diff
+
+//what is staged? (what will be commited if i commit now?)
+$ git diff --cached
+
+//remove a file
+$ git rm README
+
+//untrack a file
+$ git rm --cached README
+
+//rename a file (mv: remove file under current file name "README", then add it under a new name ("README") in the directory "docs")
+$ git mv README docs/README
+$ git mv <files> <directory>
+
+$ git diff <tree>
+$ git log -p <commit>
+$ git show <commit>
+$ git show <file>
+$ git show <tree>
+
+------------------------------
+SUBMITTING PATCHES
+
+Contributing with Git: Google Tech Talks
+http://www.youtube.com/watch?v=j45cs5_nY2k&feature=related
+
+clone repo
+make changes
+commit changes
+
+//formatting a patch
+
+//prepare the latest commit
+$ git format-patch -1
+
+//prepare the last 5 commits (n=# of commits, e.g. 1 of 5, 2 of 5)
+$ git format-patch -5 -n
+
+//send patches as emails
+# git send-email 0* .patch
+
+//cherry pick a single commit into the current branch
+//incorporate a particular commit from a different branch/version into the current branch
+$ git cherry-pick origin/master~1
+
+	$ git cherry-pick <commit>
+
+//rebase: 
+$ git rebase <base-commit>
+
+//commit branches or transplant ranges
+//put on top of what upstream currently has 
+//incorporate a range of commits or an entire branch into another branch
+//first, check out the branch
+$ git checkout topic-branch
+
+//then rebase on top of origin/master
+$ git rebase origin/master
+
+//splitting patches -- interactive rebase
+$ git checkout branch
+
+//interactive rebase (editor will pop up)
+$ git rebase -i HEAD-2
+
+
+
+
 
