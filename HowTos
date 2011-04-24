@@ -17,6 +17,13 @@ $ touch Your-File-Name-Goes-Here
 //open the file in a text editor (edit file and save it)
 $ open Your-File-Name Goes-Here		
 
+-----------------------------------
+TO OBTAIN A GIT REPOSITORY
+
+either use:
+$ git clone 
+or
+$ git init
 
 -----------------------------------
 COMMITTING
