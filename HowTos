@@ -234,7 +234,11 @@ $ git checkout branch
 //interactive rebase (editor will pop up)
 $ git rebase -i HEAD-2
 
+//get version
+$ git --version
 
+//turn on ui coloring
+$ git config --global color.ui true
 
 
 
