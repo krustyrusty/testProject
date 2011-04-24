@@ -98,12 +98,17 @@ $ git merge upstream/master
 
 
 //once you make some changes to your copy of the file you can commit them:
+<<<<<<< HEAD
 $ git push <to where> <what>
 
 $ git push origin master
 
 	
 
+=======
+$ git push origin master
+
+>>>>>>> 24ad1ef63ba4529057c569227c23fbc5a9ec8dcb
 -------------------------------------------------------
 BRANCHING -- BUILD NEW FEATURES AND TEST IDEAS
 //allows you to build new feature or test ideas without putting your main project at risk.
