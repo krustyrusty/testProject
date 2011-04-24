@@ -1,0 +1,149 @@
+CREATING FILES
+
+//create a directory for your project
+$ mkdir ~/Directory-Name-Goes-Here   
+
+//changes the current working directory
+$ cd ~/Directory-Name-Goes-Here    
+
+//set up the necessary git files
+//initialized empty git rep in: /Users/your_user_directory/Directory-Name-Goes-Here/.git/
+$ git init 		 
+			
+
+//create a new file in your new directory
+$ touch Your-File-Name-Goes-Here	
+
+//open the file in a text editor (edit file and save it)
+$ open Your-File-Name Goes-Here		
+
+
+-----------------------------------
+COMMITTING
+					
+//stage your file, adding it to the list of files to be committed
+$ git add Your-File-Name-Goes-Here	
+
+
+//name the commit for reference
+$ git commit -m 'your msg about your commit goes here' 			
+
+
+
+//NOTE:: all of this stuff is executed on local machine. must connect to github account and push commits to it
+
+
+
+//set the origin for the directory's repo
+$ git remote add origin git@github.com:krustyrusty/Directory-Name-Goes-Here.git 			
+
+
+
+//NOTE:: 
+//a remote is a repo stored on another computer (in this case github's pc)
+//it's standard to give the name "origin" to the remote that points to your main github repo
+	
+	
+
+//send the commit to github 
+$ git push origin master		
+		
+		
+//NOTE::
+//if you look at your repo in github, you'll see Your-File-Name-Goes-Here has been added
+
+//see what files have been committed
+$ git ls-files
+
+//schedule deletion of a file
+$ git rm [file name]
+
+//committing all changes in a repo 
+$ git commit -a
+
+//view the differences as you commit
+$ git commit -v
+
+-------------------------------------------------
+FORKING A REPO
+
+// in github.com, search for/find the repo you want to pull from
+// click the "fork" button in github.com project screen
+
+
+//fork the project
+$ git clone git@github.com:krustyrusty/Name-Of-Other-Persons-Project.git	
+
+//NOTE:: 
+//when a repo is cloned, it has a default remote called origin that points to your fork on github, not the original repo it was forked from. to keep track of the original repo, you need to add another remote names "upstream"
+
+//change the active directory to this new project's directory
+$ cd Name-Of-Other-Persons-Project
+
+
+//assigns the original repo to a remote called "upstream"
+$ git remote add upstream git://github.com/Project-Owners-Name/Name-Of-Other-Persons-Project.git
+
+//pull in any changes not present in your local repo (but don't modify your working files)
+$ git fetch upstream
+
+//NOTE::
+//if the original repo you forked your project from gets update. you can add those updates to your fork by running the "$ git fetch upstream" command
+
+//NOTE::
+//using the command "pull" merges any new commits to the original repo to your version without allowing you to review them (no prompt that there are conflicts)
+
+//to integrate latest commits (updates) made to original repo (belonging to other user) into your master branch (you'll receive a prompt if there are any conflicts):
+$ git merge upstream/master 
+
+
+//once you make some changes to your copy of the file you can commit them:
+$ git push origin master
+
+	$ git push <to where> <what>
+
+-------------------------------------------------------
+BRANCHING -- BUILD NEW FEATURES AND TEST IDEAS
+//allows you to build new feature or test ideas without putting your main project at risk.
+
+//a branch is a small file that references the commit it was spawned from
+
+//create a new branch and make it the active branch
+$ git checkout -b newBranchNameGoesHere
+
+	//OR DO IT IN TWO SEPARATE STEPS::
+	//create a branch
+	$ git branch mybranch
+	
+	//make new branch the active branch
+	$ git checkout mybranch
+
+//use "checkout" to switch between branches
+$ git checkout master
+$ git checkout mybranch
+
+//once you've finished working on your branch and are ready to combine it back into the master branch, use merge:
+$ git checkout master
+$ git merge mybranch
+
+//once your branch is merged with the master, you don't need it anymore and can delete it
+$ git branch -d mybranch
+
+
+//view a list of existing branches
+$ git branch -a
+
+//compare 2 branches
+$ git diff nameOfBranch1 nameOfBranch2
+	e.g.
+		$ git diff master xyz
+
+//if you're in a branch that's not the xyz branch and want to merge xyz into it:
+$ git merge xyz	
+	
+
+//to escape terminal
+ctlr + z
+
+//i screwed up, how do i reset my checkout?
+$ git checkout -f
