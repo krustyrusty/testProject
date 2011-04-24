@@ -150,6 +150,8 @@ $ git diff nameOfBranch1 nameOfBranch2
 //if you're in a branch that's not the xyz branch and want to merge xyz into it:
 $ git merge xyz	
 	
+//to delete a branch
+git branch -d <name of branch>
 
 //to escape terminal
 ctlr + z
