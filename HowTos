@@ -98,9 +98,11 @@ $ git merge upstream/master
 
 
 //once you make some changes to your copy of the file you can commit them:
+$ git push <to where> <what>
+
 $ git push origin master
 
-	$ git push <to where> <what>
+	
 
 -------------------------------------------------------
 BRANCHING -- BUILD NEW FEATURES AND TEST IDEAS
