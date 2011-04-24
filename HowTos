@@ -72,6 +72,8 @@ FORKING A REPO
 
 
 //fork the project
+$ git clone <from where>
+
 $ git clone git@github.com:krustyrusty/Name-Of-Other-Persons-Project.git	
 
 //NOTE:: 
@@ -154,3 +156,10 @@ ctlr + z
 
 //i screwed up, how do i reset my checkout?
 $ git checkout -f
+
+
+$ git pull <from where> <what>
+$ got log
+$ git status
+
+
